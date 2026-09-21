@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Care4U Admin</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/brand-overrides.css">
+  <link rel="stylesheet" href="/logo-tuning.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="/" aria-label="Care4U home"><img src="/assets/care4u-logo-transparent.png" alt="Care4U official logo"></a>
+    <strong>Store dashboard</strong>
+    <a class="button" href="/">View storefront</a>
+  </header>
+  <main class="section admin">
+    <div id="loginView" class="admin-login">
+      <p class="eyebrow">Private workspace</p><h1>Manage Care4U</h1>
+      <p class="muted">Sign in with the admin credentials configured in your environment.</p>
+      <form id="loginForm"><input name="email" type="email" placeholder="Admin email" required><input name="password" type="password" placeholder="Password" required><button class="button primary">Sign in</button></form>
+      <p id="loginError" class="error"></p>
+    </div>
+    <div id="dashboardView" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Operations</p><h2>Overview</h2></div><button id="logout" class="button">Log out</button></div>
+      <div class="metrics" id="metrics"></div>
+      <div class="admin-grid"><section class="panel"><div class="panel-head"><h3>Products</h3><button id="newProduct" class="button small">Add product</button></div><div id="productTable"></div></section><section class="panel"><div class="panel-head"><h3>Recent orders</h3></div><div id="ordersTable" class="muted">No orders yet.</div></section></div>
+      <div id="productFormWrap" class="panel" hidden><div class="panel-head"><h3>New product</h3><button id="cancelProduct" class="button">Cancel</button></div><form id="productForm" class="form-grid"><input name="name" placeholder="Product name" required><input name="sku" placeholder="SKU" required><select name="brand_id" id="brandSelect" required></select><select name="category_id" id="categorySelect" required></select><input name="price" type="number" placeholder="Price in PKR"><input name="sale_price" type="number" placeholder="Sale price in PKR"><input name="stock_quantity" type="number" placeholder="Stock quantity" value="0"><textarea name="short_description" placeholder="Short description"></textarea><button class="button primary">Create product</button></form><p id="formMessage" class="muted"></p></div>
+    </div>
+  </main>
+  <script type="module" src="/admin.js"></script>
+</body>
+</html>

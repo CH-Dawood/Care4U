@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+:root { --care-green: #164b3c; --care-mint: #e7f4ed; --care-accent: #b9dfc5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fbfdfb; color: #17352c; font-family: Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }

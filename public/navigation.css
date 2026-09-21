@@ -1,0 +1,4 @@
+.site-header nav{transition:opacity .2s ease,transform .2s ease}
+.site-header nav a:focus-visible,.header-tools button:focus-visible{outline:3px solid #8bd5b5;outline-offset:3px}
+@media(max-width:700px){.site-header{position:relative;flex-wrap:wrap}.site-header nav{order:3;display:none;flex-basis:100%;width:100%;padding:12px 0 2px;border-top:1px solid var(--line);flex-direction:column;gap:0}.site-header nav.open{display:flex}.site-header nav a{padding:10px 0}.header-tools{margin-left:auto}.header-tools #menuButton{display:inline-block}}
+@media(min-width:701px){.header-tools #menuButton{display:none}}

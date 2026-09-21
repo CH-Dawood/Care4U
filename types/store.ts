@@ -1,0 +1,4 @@
+export type OrderStatus = 'new' | 'confirmed' | 'processing' | 'packed' | 'shipped' | 'out_for_delivery' | 'delivered' | 'cancelled' | 'returned' | 'refunded'
+export type PaymentMethod = 'cod'
+export type Product = { id: string; name: string; slug: string; sku: string; brand_id: string | null; category_id: string | null; brand?: string | null; category?: string | null; short_description: string; description: string; price: number | null; sale_price: number | null; stock_quantity: number; status: string; featured: boolean; best_seller: boolean; new_arrival: boolean; image_url: string | null }
+export type CheckoutInput = { name: string; phone: string; email?: string; address: string; city: string; province?: string; postal_code?: string; notes?: string; items: { product_id: string; quantity: number }[]; payment_method: PaymentMethod }

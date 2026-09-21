@@ -1,0 +1,35 @@
+{
+  "name": "care4u-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Care4U Pakistan ecommerce platform",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import:care4u": "node scripts/import-care4u-source.js",
+    "enable:priced-stock": "node scripts/enable-priced-stock.js",
+    "enable:all-stock": "node scripts/enable-all-stock.js"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.57.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "next": "^16.0.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0",
+    "tailwindcss": "^4.1.13"
+  }
+}
